@@ -54,7 +54,7 @@ async def start_handler(_, m: Message):
     await m.reply_text("Hi, I am Alive!\n\nSearch using /request command.",
                        reply_markup=InlineKeyboardMarkup([
 
-                           [InlineKeyboardButton("Search Here", switch_inline_query_current_chat)]
+                           [InlineKeyboardButton("Search Here", switch_inline_query_current_chat="")]
 
                        ]))
     
