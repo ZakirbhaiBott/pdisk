@@ -51,10 +51,10 @@ PDiskBot = Client(
 
 @PDiskBot.on_message(filters.command("start") & ~filters.edited)
 async def start_handler(_, m: Message):
-    await m.reply_text("Hi, I am Alive!\n\nSearch using /request command.",
+    await m.reply_text("Hi, I am Alive!\n🔰 How to Search in this Bot?\n\nClick Below Search Button And Type Series Name Season and Episode According to Examples\nExamples-\nMoney Heist S02E01\nStranger things S01E04",
                        reply_markup=InlineKeyboardMarkup([
 
-                           [InlineKeyboardButton("Search Here", switch_inline_query_current_chat="")]
+                           [InlineKeyboardButton("🔍 SEARCH 🔎", switch_inline_query_current_chat="")]
 
                        ]))
     
