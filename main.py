@@ -52,9 +52,14 @@ PDiskBot = Client(
 @PDiskBot.on_message(filters.command("start") & ~filters.edited)
 async def start_handler(_, m: Message):
     await m.reply_text("Hi, I am Alive!\n\nSearch using /request command.", quote=True)
+    reply_markup=InlineKeyboardMarkup([
+
+                                     [InlineKeyboardButton("🔍 SEARCH 🔎", url="https://t.me/JoinOT")]
+
+                                 ]))
 
 
-@PDiskBot.on_message(filters.command("request", prefixes=["#", "/"]) & ~filters.edited, group=-1)
+@PDiskBot.on_message(filters.command("PlayitlinkBot", prefixes=["@", "/"]) & ~filters.edited, group=-1)
 async def text_handler(_, m: Message):
     if len(m.command) < 2:
         return await m.reply_text("Search Query Missing!")
