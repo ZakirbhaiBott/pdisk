@@ -48,7 +48,7 @@ PDiskBot = Client(
     bot_token=Configs.BOT_TOKEN
 )
 
-START_TEXT = ("Hi, I am Alive!\n
+START_TEXT = str("Hi, I am Alive!\n
 
 🔰 How to Search in this Bot?\n\n
 
