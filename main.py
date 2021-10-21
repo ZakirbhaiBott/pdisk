@@ -51,12 +51,13 @@ PDiskBot = Client(
 
 @PDiskBot.on_message(filters.command("start") & ~filters.edited)
 async def start_handler(_, m: Message):
-    await m.reply_text("Hi, I am Alive!\n\nSearch using /request command.", 
-    reply_markup=InlineKeyboardMarkup([
+    await m.reply_text("Hi, I am Alive!\n\nSearch using /request command.",
+                       reply_markup=InlineKeyboardMarkup([
 
-                                     [InlineKeyboardButton("🔍 SEARCH 🔎", switch_inline_query_current_chat=@PlayitlinkBot)]
+                           [InlineKeyboardButton("Search Here", switch_inline_query_current_chat="")]
 
-                                 ]))
+                       ]))
+    
 
 
 @PDiskBot.on_message(filters.command("PlayitlinkBot", prefixes=["@", "/"]) & ~filters.edited, group=-1)
