@@ -55,7 +55,7 @@ PDiskBot = Client(
 async def start_handler(_, m: Message):
     await m.reply_photo("https://telegra.ph/file/61a2dcd6c644b51e3f447.jpg",
 
-        caption="Hi".format(update.from_user.first_name),
+        caption="Hi",
 
         reply_markup=InlineKeyboardMarkup([
 
