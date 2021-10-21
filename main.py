@@ -48,12 +48,16 @@ PDiskBot = Client(
     bot_token=Configs.BOT_TOKEN
 )
 
+START_TEXT = ("Hi, I am Alive!\n
+
+🔰 How to Search in this Bot?\n\n
+
+Click Below Search Button And Type Series Name Season and Episode According To Examples And Send\n\n
+
+Examples-`\nMoney Heist S02E01``\nStranger things S01E04`")
 
 @PDiskBot.on_message(filters.command("start") & ~filters.edited)
-START_TEXT = ("Hi, I am Alive!\n
-🔰 How to Search in this Bot?\n\n
-Click Below Search Button And Type Series Name Season and Episode According To Examples And Send\n\n
-Examples-`\nMoney Heist S02E01``\nStranger things S01E04`")
+
 async def start_handler(_, m: Message):
     await m.reply_photo("https://telegra.ph/file/61a2dcd6c644b51e3f447.jpg",
 
