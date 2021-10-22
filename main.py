@@ -77,13 +77,13 @@ async def text_handler(_, m: Message):
         traceback.print_exc()
         try: await editable.edit("Failed to search!",
                                  reply_markup=InlineKeyboardMarkup([
-                                     [InlineKeyboardButton("Sumpot Group", url="https://t.me/malayayalies")]
+                                     [InlineKeyboardButton("Suport Group", url="https://t.me/malayayalies")]
                                  ]))
         except MessageNotModified: pass
     elif not response["data"]["list"]:
-        try: await editable.edit(f"Oops!\n Not Found!\n**Note:- Before Requesting Check Your Spelling**\n Request Your Movie Or Series Here 👇",
-                                 reply_markup=InlineKeyboardMarkup([
-                                     [InlineKeyboardButton("Sumpot Group", url="https://t.me/malayayalies")]
+        try: await editable.edit(f"Oops! Query Not Found!\n**Note:- Before Requesting Check Your Spelling**\n Request Your Movie Or Series Here ",
+                                 reply_markup=InlineKeyboarInlineKeyboardButtondMarkup([
+                                     [InlineKeyboardButton("Request Here🔰", url="https://t.me/Netflixcontacttbot")]
                                  ]))
         except MessageNotModified: pass
     else:
@@ -95,7 +95,12 @@ async def text_handler(_, m: Message):
                 break
             count += 1
             text += f"**{data[i]['title']}**\n" \
-                    f"**PDisk Link:** {Configs.PDISK_DOMAIN + 'share-video?videoid=' + data[i]['share_link'].split('=', 1)[-1]}\n\n\n"
+                    f"**PDisk Link:** {Configs.PDISK_DOMAIN + 'share-video?videoid=' + data[i]['share_link'].split('=', 1)[-1]}\n\n\n",
+            reply_markup=InlineKeyboardMarkup([
+
+                                     [InlineKeyboardButton("🔍 Search Again 🔎", switch_inline_query_current_chat="")]
+
+                                 ]))
         try: await editable.edit(text, disable_web_page_preview=True)
         except MessageNotModified: pass
 
