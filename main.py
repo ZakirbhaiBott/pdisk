@@ -77,11 +77,14 @@ async def text_handler(_, m: Message):
         traceback.print_exc()
         try: await editable.edit("Failed to search!",
                                  reply_markup=InlineKeyboardMarkup([
-                                     [InlineKeyboardButton("Sumpot Group", url="https://t.me/JoinOT")]
+                                     [InlineKeyboardButton("Sumpot Group", url="https://t.me/malayayalies")]
                                  ]))
         except MessageNotModified: pass
     elif not response["data"]["list"]:
-        try: await editable.edit("Not Found!")
+        try: await editable.edit(f"Oops!\n {reply_message} Not Found!",
+                                 reply_markup=InlineKeyboradMarkup([
+                                     [InlineKeyboardButton("Report Here", url="https://t.me/Netflixcontacttbot")]
+                                 ]))
         except MessageNotModified: pass
     else:
         data = response["data"]["list"]
