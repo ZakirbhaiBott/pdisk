@@ -92,10 +92,13 @@ async def text_handler(_, m: Message):
             count += 1
             text += f"**{data[i]['title']}**\n" \
                     f"**PDisk Link:** {Configs.PDISK_DOMAIN + 'share-video?videoid=' + data[i]['share_link'].split('=', 1)[-1]}\n\n\n",
-        try: await editable.edit(text, disable_web_page_preview=True,
-                                 reply_markup=InlineKeyboardMarkup([
+                    reply_markup=InlineKeyboardMarkup([
+
                                      [InlineKeyboardButton("🔍 Search Again 🔎", switch_inline_query_current_chat="")]
+
                                  ]))
+        try: await editable.edit(text, disable_web_page_preview=True)
+                                 
         except MessageNotModified: pass
 
 
