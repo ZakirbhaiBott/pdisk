@@ -67,7 +67,7 @@ async def start_handler(_, m: Message):
 async def text_handler(_, m: Message):
     if len(m.command) < 2:
         return await m.reply_text("Search Query Missing!")
-    editable = await m.reply_text("Please Wait ...", quote=True)
+    editable = await m.reply_text("Cooking your results\nPlease Wait...\n\n🔥 Join For Movies @netflixorgi\n🔥 Join For Series @malayayalies", quote=True)
     response = await search_pdisk_videos(m.text.split(" ", 1)[-1], Configs.PDISK_USERNAME, Configs.PDISK_PASSWORD)
     if isinstance(response, Exception):
         traceback.print_exc()
