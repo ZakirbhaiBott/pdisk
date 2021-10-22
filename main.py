@@ -53,7 +53,7 @@ PDiskBot = Client(
 @PDiskBot.on_message(filters.command("start") & ~filters.edited)
 
 async def start_handler(_, m: Message):
-    await m.reply_photo("https://telegra.ph/file/61a2dcd6c644b51e3f447.jpg",
+    await m.reply_video("https://telegra.ph/file/76045a4ef3f8cdb2ba153.mp4",
 
         caption="**Watch Above Tutorial 👆**\n\nExamples-\n`@PlayitlinkBot money Heist S02E01`",
 
