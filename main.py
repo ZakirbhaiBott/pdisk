@@ -54,13 +54,9 @@ PDiskBot = Client(
 
 async def start_handler(_, m: Message):
     await m.reply_video("https://telegra.ph/file/76045a4ef3f8cdb2ba153.mp4",
-
         caption="**Watch Above Tutorial 👆**\n\nExamples-\n`@PlayitlinkBot See S02E01`\n`@PlayitlinkBot doctor 2021`",
-
         reply_markup=InlineKeyboardMarkup([
-
                            [InlineKeyboardButton("🔍 SEARCH 🔎", switch_inline_query_current_chat="")]
-
                        ]))
 
 
@@ -96,12 +92,9 @@ async def text_handler(_, m: Message):
             count += 1
             text += f"**{data[i]['title']}**\n" \
                     f"**PDisk Link:** {Configs.PDISK_DOMAIN + 'share-video?videoid=' + data[i]['share_link'].split('=', 1)[-1]}\n\n\n",
-            
         try: await editable.edit(text, disable_web_page_preview=True,
                                  reply_markup=InlineKeyboardMarkup([
-
                                      [InlineKeyboardButton("🔍 Search Again 🔎", switch_inline_query_current_chat="")]
-
                                  ]))
         except MessageNotModified: pass
 
