@@ -81,7 +81,7 @@ async def text_handler(_, m: Message):
                                  ]))
         except MessageNotModified: pass
     elif not response["data"]["list"]:
-        try: await editable.edit(f"Oops!\n {reply_message} Not Found!",
+        try: await editable.edit(f"Oops!\n {query} Not Found!",
                                  reply_markup=InlineKeyboradMarkup([
                                      [InlineKeyboardButton("Report Here", url="https://t.me/Netflixcontacttbot")]
                                  ]))
