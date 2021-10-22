@@ -55,7 +55,7 @@ PDiskBot = Client(
 async def start_handler(_, m: Message):
     await m.reply_video("https://telegra.ph/file/76045a4ef3f8cdb2ba153.mp4",
 
-        caption="**Watch Above Tutorial 👆**\n\nExamples-\n`@PlayitlinkBot money Heist S02E01`",
+        caption="**Watch Above Tutorial 👆**\n\nExamples-\n`@PlayitlinkBot See S02E01`\n`@PlayitlinkBot doctor 2021`",
 
         reply_markup=InlineKeyboardMarkup([
 
