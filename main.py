@@ -77,7 +77,7 @@ async def text_handler(_, m: Message):
         traceback.print_exc()
         try: await editable.edit("Failed to search!",
                                  reply_markup=InlineKeyboardMarkup([
-                                     [InlineKeyboardButton("Suport Group", url="https://t.me/malayayalies")]
+                                     [InlineKeyboardButton("Support Group", url="https://t.me/malayayalies")]
                                  ]))
         except MessageNotModified: pass
     elif not response["data"]["list"]:
@@ -97,7 +97,12 @@ async def text_handler(_, m: Message):
             text += f"**{data[i]['title']}**\n" \
                     f"**PDisk Link:** {Configs.PDISK_DOMAIN + 'share-video?videoid=' + data[i]['share_link'].split('=', 1)[-1]}\n\n\n",
             
-        try: await editable.edit(text, disable_web_page_preview=True)
+        try: await editable.edit(text, disable_web_page_preview=True,
+                                 reply_markup=InlineKeyboardMarkup([
+
+                                     [InlineKeyboardButton("🔍 Search Again 🔎", switch_inline_query_current_chat="")]
+
+                                 ]))
         except MessageNotModified: pass
 
 
