@@ -101,7 +101,7 @@ async def run():
     print("\n\nBot Started!\n\n")
     await idle()
     await PDiskBot.stop()
-    print("\n\nBot Stopped!\n\n")
+    print("\n\nBot Stopped!\n\n")1
 
 
 if __name__ == "__main__":
