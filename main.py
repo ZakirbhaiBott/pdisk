@@ -56,7 +56,8 @@ async def start_handler(_, m: Message):
     await m.reply_video("https://telegra.ph/file/76045a4ef3f8cdb2ba153.mp4",
         caption="**Watch Above Tutorial 👆**\n\nExamples-\n`@PlayitlinkBot See S02E01`\n`@PlayitlinkBot doctor 2021`",
         reply_markup=InlineKeyboardMarkup([
-                           [InlineKeyboardButton("🔍 SEARCH 🔎", switch_inline_query_current_chat="")]
+                           [InlineKeyboardButton("🔍 SEARCH 🔎", switch_inline_query_current_chat=""),
+                           InlineKeyboardButton("Star ⭐ Rate Me ⭐", url="https://t.me/tlgrmcbot?start=playitlinkbot-bot")]
                        ]))
 
 
