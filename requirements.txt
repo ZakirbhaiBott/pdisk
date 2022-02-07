@@ -1,5 +1,5 @@
 Pyrogram
 TgCrypto
 requests
-selenium
+
 python-dotenv
